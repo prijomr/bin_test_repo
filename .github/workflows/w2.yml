@@ -18,3 +18,4 @@ jobs:
       - name: Use Input
         run: | 
           echo "Using input: ${{inputs.example_input }}"
+          echo ${{ github.workspace}}
