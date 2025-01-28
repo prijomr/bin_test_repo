@@ -1,0 +1,20 @@
+# .github/workflows/w2.yml
+name: Workflow W2
+
+on:
+  workflow_call:
+    inputs:
+      example_input:
+        required: true
+        type: string
+
+jobs:
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+
+      - name: Use Input
+        run: | 
+          echo "Using input: ${{inputs.example_input }}"
